@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1420" width="820" height="1420" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+<title>8-bit BCD Adder/Subtractor - Flow Chart</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect width="820" height="1420" fill="#ffffff"/>
+<text x="410" y="34.0" font-size="22" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">두 자리 BCD 가감산기 · Flow Chart</text>
+<rect x="330" y="66" width="160" height="48" rx="24" fill="#2b3240" stroke="#2b3240" stroke-width="2"/>
+<text x="410" y="90.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="central">START</text>
+<path d="M410,114 V150" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M268.0,150.0 H588.0 L552.0,222.0 H232.0 Z" fill="#e8f1fd" stroke="#2f6fd1" stroke-width="2"/>
+<text x="410" y="175.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">입력 설정</text>
+<text x="410" y="196.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">DIP Switch A, B (BCD 2자리)</text>
+<path d="M410,222 V262" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M268.0,262.0 H588.0 L552.0,334.0 H232.0 Z" fill="#e8f1fd" stroke="#2f6fd1" stroke-width="2"/>
+<text x="410" y="287.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">모드 선택</text>
+<text x="410" y="308.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">Toggle Switch (SUB)</text>
+<path d="M410,334 V370" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M410,370.0 L540.0,430 L410,490.0 L280.0,430 Z" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="410" y="419.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">감산 모드인가?</text>
+<text x="410" y="440.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">SUB = 1</text>
+<path d="M280,430 H175 V480" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="265" y="416" font-size="14" fill="#1f2430" text-anchor="end" dominant-baseline="central">NO</text>
+<path d="M540,430 H645 V480" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="555" y="416" font-size="14" fill="#1f2430" text-anchor="start" dominant-baseline="central">YES</text>
+<rect x="55" y="480" width="240" height="62" rx="10" fill="#e9f7ee" stroke="#2c9a55" stroke-width="2"/>
+<text x="175.0" y="500.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">B 그대로 사용</text>
+<text x="175.0" y="521.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">B ⊕ 0 = B</text>
+<path d="M175,542 V570" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="55" y="570" width="240" height="62" rx="10" fill="#e9f7ee" stroke="#2c9a55" stroke-width="2"/>
+<text x="175.0" y="601.0" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">Cin = 0</text>
+<path d="M175,632 V660" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="55" y="660" width="240" height="62" rx="10" fill="#f4f5f7" stroke="#5b6270" stroke-width="2"/>
+<text x="175.0" y="691.0" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">LED OFF</text>
+<rect x="525" y="480" width="240" height="62" rx="10" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="645.0" y="500.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">B 비트 반전 (XOR)</text>
+<text x="645.0" y="521.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">B ⊕ 1 = ~B (1의 보수)</text>
+<path d="M645,542 V570" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="525" y="570" width="240" height="62" rx="10" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="645.0" y="590.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">Cin = 1</text>
+<text x="645.0" y="611.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">~B + 1 = 2의 보수</text>
+<path d="M645,632 V660" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="525" y="660" width="240" height="62" rx="10" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="645.0" y="691.0" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">LED ON</text>
+<path d="M175,722 V760 H645 V722" fill="none" stroke="#1f2430" stroke-width="2"/>
+<circle cx="410" cy="760" r="4" fill="#1f2430"/>
+<path d="M410,760 V790" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="240" y="790" width="340" height="72" rx="10" fill="#e9f7ee" stroke="#2c9a55" stroke-width="2"/>
+<text x="410.0" y="815.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">8비트 이진 가감산</text>
+<text x="410.0" y="836.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS83 ×2 : A + B' + Cin</text>
+<path d="M410,862 V900" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M410,900.0 L560.0,965 L410,1030.0 L260.0,965 Z" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="410" y="954.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">BCD 보정 필요?</text>
+<text x="410" y="975.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">자리값 > 9 또는 캐리 발생</text>
+<path d="M560,965 H645 V1010" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="575" y="951" font-size="14" fill="#1f2430" text-anchor="start" dominant-baseline="central">YES</text>
+<rect x="520" y="1010" width="250" height="90" rx="10" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="2"/>
+<text x="645.0" y="1034.8" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">BCD 보정</text>
+<text x="645.0" y="1055.0" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS08 · 74LS32 판별</text>
+<text x="645.0" y="1075.2" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS153 선택 → 74LS83 가산</text>
+<path d="M645,1100 V1140 H410" fill="none" stroke="#1f2430" stroke-width="2"/>
+<path d="M410,1030 V1140" fill="none" stroke="#1f2430" stroke-width="2"/>
+<text x="420" y="1052" font-size="14" fill="#1f2430" text-anchor="start" dominant-baseline="central">NO</text>
+<circle cx="410" cy="1140" r="4" fill="#1f2430"/>
+<path d="M410,1140 V1160" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="240" y="1160" width="340" height="62" rx="10" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="410.0" y="1180.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">BCD → 7세그먼트 변환</text>
+<text x="410.0" y="1201.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS47 ×2</text>
+<path d="M410,1222 V1250" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M268.0,1250.0 H588.0 L552.0,1318.0 H232.0 Z" fill="#f4f5f7" stroke="#5b6270" stroke-width="2"/>
+<text x="410" y="1273.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">결과 출력</text>
+<text x="410" y="1294.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">7-Segment 2자리 표시</text>
+<path d="M410,1318 V1350" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<rect x="330" y="1350" width="160" height="48" rx="24" fill="#2b3240" stroke="#2b3240" stroke-width="2"/>
+<text x="410" y="1374.0" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="central">END</text>
+</svg>

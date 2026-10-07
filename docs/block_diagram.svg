@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1010" width="960" height="1010" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+<title>8-bit BCD Adder/Subtractor - Block Diagram</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect width="960" height="1010" fill="#ffffff"/>
+<text x="480.0" y="34.0" font-size="22" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">두 자리 BCD 가감산기 · Block Diagram</text>
+<rect x="60" y="80" width="240" height="76" rx="10" fill="#e8f1fd" stroke="#2f6fd1" stroke-width="2"/>
+<text x="180.0" y="97.8" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">DIP Switch A (S1)</text>
+<text x="180.0" y="118.0" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">8비트 · BCD 2자리 입력</text>
+<text x="180.0" y="138.2" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">1 kΩ 풀업 저항</text>
+<rect x="360" y="80" width="240" height="76" rx="10" fill="#e8f1fd" stroke="#2f6fd1" stroke-width="2"/>
+<text x="480.0" y="97.8" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">DIP Switch B (S2)</text>
+<text x="480.0" y="118.0" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">8비트 · BCD 2자리 입력</text>
+<text x="480.0" y="138.2" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">1 kΩ 풀업 저항</text>
+<rect x="660" y="80" width="240" height="76" rx="10" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="780.0" y="107.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">Toggle Switch (S3)</text>
+<text x="780.0" y="128.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">가산 / 감산 모드 선택 (SUB)</text>
+<rect x="360" y="210" width="240" height="76" rx="10" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="480.0" y="237.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">74LS86 ×2 (XOR)</text>
+<text x="480.0" y="258.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">B ⊕ SUB → 1의 보수 생성</text>
+<rect x="720" y="210" width="180" height="76" rx="10" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="810.0" y="237.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">LED</text>
+<text x="810.0" y="258.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">감산 모드 표시</text>
+<rect x="60" y="350" width="540" height="90" rx="10" fill="#e9f7ee" stroke="#2c9a55" stroke-width="2"/>
+<text x="330.0" y="374.8" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">74LS83 ×2  (U1 하위 4비트 · U2 상위 4비트)</text>
+<text x="330.0" y="395.0" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">8비트 이진 가감산 : A + (B ⊕ SUB) + Cin</text>
+<text x="330.0" y="415.2" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">U1 Cout → U2 Cin 직렬 연결</text>
+<rect x="40" y="490" width="580" height="200" rx="14" fill="none" stroke="#7d4cc2" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="330" y="510" font-size="15" fill="#7d4cc2" text-anchor="middle" dominant-baseline="central">BCD 보정부</text>
+<rect x="60" y="530" width="160" height="140" rx="10" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="2"/>
+<text x="140.0" y="569.6" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">보정 조건 판별</text>
+<text x="140.0" y="589.9" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS08 (AND)</text>
+<text x="140.0" y="610.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS32 (OR)</text>
+<text x="140.0" y="630.4" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">자리별 > 9 · 캐리</text>
+<rect x="250" y="530" width="160" height="140" rx="10" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="2"/>
+<text x="330.0" y="569.6" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">보정값 선택</text>
+<text x="330.0" y="589.9" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS153</text>
+<text x="330.0" y="610.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">듀얼 4:1 MUX</text>
+<text x="330.0" y="630.4" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">가산/감산별 경로</text>
+<rect x="440" y="530" width="160" height="140" rx="10" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="2"/>
+<text x="520.0" y="569.6" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">보정 가산</text>
+<text x="520.0" y="589.9" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">74LS83 ×3</text>
+<text x="520.0" y="610.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">U15 · U5 · U6</text>
+<text x="520.0" y="630.4" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">BCD 결과 생성</text>
+<rect x="60" y="740" width="255" height="80" rx="10" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="187.5" y="769.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">74LS47 (U7)</text>
+<text x="187.5" y="790.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">BCD → 7세그먼트 · 십의 자리</text>
+<rect x="345" y="740" width="255" height="80" rx="10" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="472.5" y="769.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">74LS47 (U8)</text>
+<text x="472.5" y="790.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">BCD → 7세그먼트 · 일의 자리</text>
+<rect x="60" y="870" width="255" height="70" rx="10" fill="#f4f5f7" stroke="#5b6270" stroke-width="2"/>
+<text x="187.5" y="894.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">7-Segment (U9)</text>
+<text x="187.5" y="915.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">십의 자리 출력</text>
+<rect x="345" y="870" width="255" height="70" rx="10" fill="#f4f5f7" stroke="#5b6270" stroke-width="2"/>
+<text x="472.5" y="894.9" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle" dominant-baseline="central">7-Segment (U10)</text>
+<text x="472.5" y="915.1" font-size="13" font-weight="normal" fill="#5b6270" text-anchor="middle" dominant-baseline="central">일의 자리 출력</text>
+<path d="M180,156 V350" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="188" y="300" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">A[7:0]</text>
+<path d="M480,156 V210" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="488" y="186" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">B[7:0]</text>
+<path d="M480,286 V350" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="488" y="318" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">B ⊕ SUB</text>
+<path d="M780,156 V182" fill="none" stroke="#1f2430" stroke-width="2"/>
+<circle cx="780" cy="182" r="4" fill="#1f2430"/>
+<path d="M780,182 H640 V248 H600" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M780,182 H810 V210" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="640" cy="248" r="4" fill="#1f2430"/>
+<path d="M640,248 V395 H600" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="648" y="380" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">Cin = SUB</text>
+<circle cx="640" cy="395" r="4" fill="#1f2430"/>
+<path d="M640,395 V600 H600" fill="none" stroke="#1f2430" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<text x="648" y="585" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">모드 신호</text>
+<text x="790" y="170" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">SUB</text>
+<path d="M330,440 V466" fill="none" stroke="#1f2430" stroke-width="2"/>
+<path d="M330,466 H140 V530" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M330,466 H520 V530" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="330" cy="466" r="4" fill="#1f2430"/>
+<text x="338" y="453" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">이진 결과 · 캐리</text>
+<path d="M220,600 H250" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M410,600 H440" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M480,670 V705 H187 V740" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M560,670 V740" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="195" y="722" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">상위 BCD 자리</text>
+<text x="568" y="722" font-size="13" fill="#5b6270" text-anchor="start" dominant-baseline="central">하위 BCD 자리</text>
+<path d="M187,820 V870" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<path d="M472,820 V870" fill="none" stroke="#1f2430" stroke-width="2" marker-end="url(#a)"/>
+<text x="680" y="760" font-size="14" font-weight="bold" fill="#1f2430">범례</text>
+<rect x="680" y="776" width="22" height="16" rx="4" fill="#e8f1fd" stroke="#2f6fd1" stroke-width="2"/>
+<text x="712" y="784" font-size="13" fill="#1f2430" text-anchor="start" dominant-baseline="central">입력부</text>
+<rect x="680" y="802" width="22" height="16" rx="4" fill="#fdf1e3" stroke="#d0811f" stroke-width="2"/>
+<text x="712" y="810" font-size="13" fill="#1f2430" text-anchor="start" dominant-baseline="central">모드 제어 · 보수 생성</text>
+<rect x="680" y="828" width="22" height="16" rx="4" fill="#e9f7ee" stroke="#2c9a55" stroke-width="2"/>
+<text x="712" y="836" font-size="13" fill="#1f2430" text-anchor="start" dominant-baseline="central">이진 가감산</text>
+<rect x="680" y="854" width="22" height="16" rx="4" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="2"/>
+<text x="712" y="862" font-size="13" fill="#1f2430" text-anchor="start" dominant-baseline="central">BCD 보정</text>
+<rect x="680" y="880" width="22" height="16" rx="4" fill="#fdeaea" stroke="#cf3b3b" stroke-width="2"/>
+<text x="712" y="888" font-size="13" fill="#1f2430" text-anchor="start" dominant-baseline="central">디코딩 · 표시</text>
+</svg>
