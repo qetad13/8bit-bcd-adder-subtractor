@@ -21,7 +21,7 @@
 | 감산 방식 | 74LS86 XOR로 1의 보수 + Cin = 1 → **2의 보수 덧셈** |
 | 사용 IC | 74LS83 ×5, 74LS86 ×2, 74LS08, 74LS32, 74LS153, 74LS47 ×2 (총 12개) |
 | 전원 | DC 잭 + 5 V 어댑터 |
-| 검증 | 시뮬레이션 6 + 12 = 18, 14 − 8 = 6 / 실물 5 + 8 = 13, 12 − 4 = 8 |
+| 검증 | 시뮬레이션 6 + 12 = 18, 14 − 8 = 6 / 브레드보드 5 + 8 = 13, 12 − 4 = 8 |
 
 <p align="center">
   <img src="images/final_add.jpg" width="32%">
@@ -118,7 +118,13 @@
 | **시뮬레이션** | 6 + 12 = **18**<br><img src="images/sim_add.png" width="360"> | 14 − 8 = **6**<br><img src="images/sim_sub.png" width="360"> |
 | **브레드보드** | 5 + 8 = **13**<br><img src="images/breadboard_add.jpg" width="360"> | 12 − 4 = **8**<br><img src="images/breadboard_sub.jpg" width="360"> |
 
-동작 영상: [`videos/demo_1.mp4`](videos/demo_1.mp4), [`videos/demo_2.mp4`](videos/demo_2.mp4)
+### 동작 영상
+
+| 영상 1 | 영상 2 |
+|:---:|:---:|
+| <a href="videos/demo_1.mp4"><img src="images/demo_1_thumb.jpg" width="380" alt="동작 영상 1"></a> | <a href="videos/demo_2.mp4"><img src="images/demo_2_thumb.jpg" width="380" alt="동작 영상 2"></a> |
+
+▶ [`videos/demo_1.mp4`](videos/demo_1.mp4) · [`videos/demo_2.mp4`](videos/demo_2.mp4) — 완성품에서 스위치로 입력하고 결과를 표시하는 모습
 
 ---
 
@@ -143,9 +149,9 @@
 - **해결**: 스위치 출력단마다 1 kΩ 풀업 저항(총 16개)을 달아 기본값을 고정
 
 ### 2. 시뮬레이션과 실물 동작 차이
-- **증상**: 7개 IC로 구성해 Multisim에서는 정상 동작한 회로가, 납땜 후에는 다르게 동작
+- **증상**: 처음 IC 7개로 구성한 초기 회로가 Multisim에서는 정상 동작했지만, 납땜 후에는 다르게 동작
 - **원인**: 시뮬레이션에 없는 전기적 특성과 배선·납땜 상태 문제
-- **해결**: 회로를 재구성하고 선 연결을 하나씩 다시 점검
+- **해결**: 회로를 재구성(최종 IC 12개)하고 선 연결을 하나씩 다시 점검
 
 ### 3. 십의 자리가 바뀌는 연산에서 출력 오류
 - **증상**: `15 − 8`처럼 결과의 십의 자리가 바뀌는 경우 세그먼트에 잘못된 값 표시
@@ -173,5 +179,6 @@
 `NI Multisim 14`
 
 ## 라이선스 / 출처
+- [MIT License](LICENSE)
 - 회로 설계는 팀에서 직접 작성했으며, 블록도·플로우차트는 결과보고서를 바탕으로 다시 그렸습니다.
 - 데이터시트: [74LS83](https://www.alldatasheet.co.kr/datasheet-pdf/view/51091/FAIRCHILD/74LS83.html) · [74LS47](https://www.alldatasheet.co.kr/datasheet-pdf/view/51080/FAIRCHILD/74LS47.html) · [74LS153](https://www.alldatasheet.co.kr/datasheet-pdf/view/27384/TI/74LS153.html)
